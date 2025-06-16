@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing Calculator - GlobeSwift Logistics</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafb;
+      color: #1e3a8a;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 500px;
+      margin: 60px auto;
+      background: white;
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      width: 100%;
+      background-color: #1e3a8a;
+      color: white;
+      padding: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #163079;
+    }
+    .result {
+      margin-top: 30px;
+      background-color: #eef2ff;
+      padding: 20px;
+      border-radius: 8px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Shipping Cost Calculator</h1>
+    
+    <label for="weight">Package Weight (kg)</label>
+    <input type="number" id="weight" min="0" placeholder="e.g. 2.5" />
+
+    <label for="destination">Destination</label>
+    <select id="destination">
+      <option value="local">Local (Within Country)</option>
+      <option value="international">International</option>
+    </select>
+
+    <label for="speed">Delivery Speed</label>
+    <select id="speed">
+      <option value="standard">Standard</option>
+      <option value="express">Express</option>
+    </select>
+
+    <button onclick="calculatePrice()">Estimate Cost</button>
+
+    <div class="result" id="priceResult">
+      <h3>Estimated Shipping Cost:</h3>
+      <p id="costOutput">$0.00</p>
+    </div>
+  </div>
+
+  <script>
+    function calculatePrice() {
+      const weight = parseFloat(document.getElementById("weight").value);
+      const destination = document.getElementById("destination").value;
+      const speed = document.getElementById("speed").value;
+      const resultBox = document.getElementById("priceResult");
+      const costOutput = document.getElementById("costOutput");
+
+      if (isNaN(weight) || weight <= 0) {
+        alert("Please enter a valid package weight.");
+        return;
+      }
+
+      let base = 5;
+      let rate = destination === "international" ? 10 : 5;
+      let speedFee = speed === "express" ? 15 : 0;
+
+      let total = base + (weight * rate) + speedFee;
+
+      costOutput.textContent = `$${total.toFixed(2)}`;
+      resultBox.style.display = "block";
+    }
+  </script>
+</body>
+</html>
