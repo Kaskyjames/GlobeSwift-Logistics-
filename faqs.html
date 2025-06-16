@@ -5,6 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FAQs - GlobeSwift Logistics</title>
   <style>
+    
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    header nav {
+      margin-top: 10px;
+    }
+    header nav a {
+      display: block;
+      margin: 5px 0;
+    }
+header nav a:hover {
+    color: #facc15; /* Soft yellow on hover */
+    text-decoration: underline;
+  }
+
+  footer a:hover {
+    color: #facc15;
+  }
+
+  button:hover {
+    background-color: #2563eb !important; /* Slightly lighter blue */
+    transform: scale(1.03);
+    transition: 0.2s ease-in-out;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #f9fafb;
@@ -36,6 +66,7 @@
       margin: 0;
       line-height: 1.6;
     }
+    }
   </style>
 </head>
 <body>
@@ -50,7 +81,7 @@
     <a href="track.html" style="color: white; margin-right: 15px; text-decoration: none;">Track</a>
     <a href="pricing.html" style="color: white; margin-right: 15px; text-decoration: none;">Calculator</a>
     <a href="contact.html" style="color: white; margin-right: 15px; text-decoration: none;">Contact</a>
-    <a href="faqs.html" style="color: white; text-decoration: none;">FAQs</a>
+    <a href="faqs.html" style="color: #fbbf24; font-weight: bold; text-decoration: none;">FAQs</a>
   </nav>
 </header>
   
