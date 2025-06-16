@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GlobeSwift Logistics - Home</title>
+  <style>
+    /* Reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafb;
+      color: #1e3a8a;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Hero banner */
+    .hero {
+      background: linear-gradient(135deg, #1e3a8a 0%, #10b981 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      border-radius: 12px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .btn-primary {
+      background-color: #f97316;
+      color: white;
+      padding: 15px 30px;
+      font-weight: 600;
+      border-radius: 6px;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background-color: #d8580a;
+    }
+
+    /* Key services */
+    .services-overview {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 60px;
+    }
+    .service-card {
+      background: white;
+      flex: 1 1 30%;
+      margin: 10px;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+    .service-card h3 {
+      color: #1e3a8a;
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+    }
+    .service-card p {
+      color: #4b5563;
+      font-size: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .services-overview {
+        flex-direction: column;
+      }
+      .service-card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Hero Banner -->
+    <section class="hero" aria-label="Hero banner with GlobeSwift Logistics tagline">
+      <h1>Fast. Reliable. Global.</h1>
+      <p>Your trusted partner for international delivery with real-time tracking and unbeatable service.</p>
+      <a href="#booking" class="btn-primary">Book Now</a>
+      <a href="#track" class="btn-primary">Track Shipment</a>
+    </section>
+
+    <!-- Key Services Overview -->
+    <section class="services-overview" aria-label="Key services offered by GlobeSwift Logistics">
+      <article class="service-card">
+        <h3>Shipment Tracking</h3>
+        <p>Real-time updates to keep you informed every step of the way.</p>
+      </article>
+      <article class="service-card">
+        <h3>Pricing Calculator</h3>
+        <p>Get instant, transparent shipping quotes based on your package details.</p>
+      </article>
+      <article class="service-card">
+        <h3>Easy Booking</h3>
+        <p>Simple and fast booking process tailored for individuals and businesses.</p>
+      </article>
+      <article class="service-card">
+        <h3>Customer Support</h3>
+        <p>Dedicated support team ready to assist you anytime.</p>
+      </article>
+    </section>
+  </div>
+</body>
+</html>
